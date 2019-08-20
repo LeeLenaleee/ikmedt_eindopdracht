@@ -190,6 +190,6 @@ placeRoof = () =>{
 checkDone = () =>{
     console.log(objectsPlaced);
     if (objectsPlaced === 5){
-        location.replace("../../index.html")
+        setTimeout(function(){ location.replace("../../index.html") }, 4000);
     }else objectsPlaced ++;
 };
