@@ -8,7 +8,7 @@
 </head>
 <body>
 <a-scene href="#" id="js--scene" environment="preset: forest;">
-    <a-camera id="js--camera" position="15 5 15">
+    <a-camera id="js--camera" position="15 2 15">
         <a-entity
                 id="js--cursor"
                 animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1;"
@@ -31,19 +31,42 @@
 <!--        muur lang - deur-->
         <a-asset-item id="muurZonderDeur-obj" src="../../3dModels/muurZonderDeur.obj"></a-asset-item>
         <a-asset-item id="muurZonderDeur-mtl" src="../../3dModels/muurZonderDeur.mtl"></a-asset-item>
+<!--        korte muuren-->
+        <a-asset-item id="korteMuur1-obj" src="../../3dModels/muurZijkanten.obj"></a-asset-item>
+        <a-asset-item id="korteMuur1-mtl" src="../../3dModels/muurZijkanten.mtl"></a-asset-item>
+        <a-asset-item id="korteMuur2-obj" src="../../3dModels/muurZijkanten.obj"></a-asset-item>
+        <a-asset-item id="korteMuur2-mtl" src="../../3dModels/muurZijkanten.mtl"></a-asset-item>
+<!--        Dak-->
+        <a-asset-item id="rietDak-obj" src="../../3dModels/rietDak.obj"></a-asset-item>
+        <a-asset-item id="rietDak-mtl" src="../../3dModels/rietDak.mtl"></a-asset-item>
     </a-assets>
 
-    <a-obj-model position="4.5 0 6" rotation="0 270" src="#muur-obj" mtl="#muur-mtl"></a-obj-model>
-    <a-obj-model position="3.8 0 6.2" rotation="0 270" src="#muurZonderDeur-obj" mtl="#muurZonderDeur-mtl"></a-obj-model>
-    <a-obj-model position="9.98 0 6.2" rotation="0 270" src="#deur-obj" mtl="#deur-mtl" height="2"></a-obj-model>
+<!--    scale nodig voor size omdat het custom ombjects zijn dus can jniet met heigt en widht werken-->
+    <a-obj-model id="js--bigWall" position="15 0.5 22" rotation="0 270" scale="0.3 0.3 0.3" src="#muur-obj" mtl="#muur-mtl" onclick="pickBigWall()"></a-obj-model>
+    <a-obj-model id="js--smollWall" position="19 0.5 15" rotation="0 0 0" scale="0.3 0.3 0.3" src="#muurZonderDeur-obj" mtl="#muurZonderDeur-mtl" onclick="pickSmallWall()"></a-obj-model>
+    <a-obj-model id="js--door" position="16 0.5 19" rotation="0 270" scale="0.3 0.3 0.3" src="#deur-obj" mtl="#deur-mtl" onclick="pickDoor()"></a-obj-model>
+    <a-obj-model id="js--smollSmollWall" position="17.3 0.5 17.3" rotation="0 120" scale="0.3 0.3 0.3"  src="#korteMuur1-obj" mtl="#korteMuur1-mtl" onclick="pickSmollSmollWall()"></a-obj-model>
+    <a-obj-model id="js--smollSmollWall2" position="13.5 0.5 19" rotation="0 45" scale="0.3 0.3 0.3" src="#korteMuur2-obj" mtl="#korteMuur2-mtl" onclick="pickSmollSmollWall2()"></a-obj-model>
+    <a-obj-model id="js--roof" position="18 0.5 10" rotation="45 -50" scale="0.3 0.3 0.3" src="#rietDak-obj" mtl="#rietDak-mtl" onclick="pickRoof()"></a-obj-model>
+
+<!--    Camera movement to other corners-->
 <!--    SouthEast-->
     <a-cylinder color="cyan" segments-radial="6" height="0.8" position="15 0 15" onclick="cameraToSouthEast()"></a-cylinder>
 <!--    SouthWest-->
-    <a-cylinder color="cyan" segments-radial="6" height="0.8" position="-15 0 15" onclick="cameraToSouthWest()"></a-cylinder>
+    <a-cylinder color="cyan" segments-radial="6" height="0.8" position="-8 0 15" onclick="cameraToSouthWest()"></a-cylinder>
 <!--    NorthEast-->
-    <a-cylinder color="cyan" segments-radial="6" height="0.8" position="15 0 -15" onclick="cameraToNorthEast()"></a-cylinder>
+    <a-cylinder color="cyan" segments-radial="6" height="0.8" position="15 0 -5" onclick="cameraToNorthEast()"></a-cylinder>
 <!--    NorthWest-->
-    <a-cylinder color="cyan" segments-radial="6" height="0.8" position="-15 0 -15" onclick="cameraToNorthwest()"></a-cylinder>
+    <a-cylinder color="cyan" segments-radial="6" height="0.8" position="-8 0 -5" onclick="cameraToNorthwest()"></a-cylinder>
+
+<!--    layout van huis maken waar de stukken op geplaatst dienen te worden-->
+    <a-box id="js--doorPlaceHolder" color="red" position="10 0 10" scale="2.3 0.1 1" onclick="placeDoor()"></a-box>
+    <a-box id="js--shortWallPlaceHolder" color="red" position="3 0 10" scale="8 0.1 1" onclick="placeShortWall()"></a-box>
+    <a-box id="js--sideWallPlaceHolder" color="red" position="12 0 6" rotation="0 90" scale="6 0.1 1" onclick="placeSmollSmollWall()"></a-box>
+    <a-box id="js--sideWal2PlaceHolder" color="red" position="-2.5 0 6" rotation="0 90" scale="6 0.1 1" onclick="placeSmollSmollWall2()"></a-box>
+    <a-box id="js--longWallPlaceHolder" color="red" position="4 0 2" rotation="0 " scale="12 0.1 1" onclick="placeBigWall()"></a-box>
+    <a-box id="js--roofPlaceHolder" color="red" position="4.5 5 6" rotation="0 " scale="3 0.3 3" onclick="placeRoof()"></a-box>
+
 </a-scene>
 <script src="../js/se.js" type="text/javascript"></script>
 </body>
