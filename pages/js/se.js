@@ -195,8 +195,9 @@ placeRoof = () =>{
 };
 
 checkDone = () =>{
-    console.log(objectsPlaced);
     if (objectsPlaced === 5){
-        setTimeout(function(){ location.replace("../../index.html") }, 4000);
+        const complete = new Audio('../../sound/complete.mp3');
+        complete.play();
+        setTimeout(function(){ location.replace("../../index.html") }, 8500);
     }else objectsPlaced ++;
 };

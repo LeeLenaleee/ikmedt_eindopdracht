@@ -151,5 +151,9 @@ placePink = () =>{
 };
 
 checkDone = () =>{
-    if (placed[0] && placed[1] && placed[2] && placed[3] && placed[4] && placed[5] && placed[6]) setTimeout(function(){ location.replace("../../index.html") }, 4000)
+    if (placed[0] && placed[1] && placed[2] && placed[3] && placed[4] && placed[5] && placed[6]){
+        const complete = new Audio('../../sound/complete.mp3');
+        complete.play();
+        setTimeout(function(){ location.replace("../../index.html") }, 8500);
+    }
 };

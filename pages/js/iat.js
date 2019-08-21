@@ -157,5 +157,7 @@ selectYellow = () =>{
 };
 
 toMainMenu = () =>{
-    location.replace("../../index.html")
+    const complete = new Audio('../../sound/complete.mp3');
+    complete.play();
+    setTimeout(function(){ location.replace("../../index.html") }, 8500);
 };
