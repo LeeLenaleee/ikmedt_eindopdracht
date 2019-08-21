@@ -155,3 +155,7 @@ selectYellow = () =>{
     colorPaint = "yellow";
     cursor.setAttribute('material', 'color: yellow; shader: flat')
 };
+
+toMainMenu = () =>{
+    location.replace("../../index.html")
+};
