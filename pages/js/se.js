@@ -20,6 +20,8 @@ cameraToNorthwest = () => {
 };
 
 pickDoor = () => {
+    // check if already holding something
+    if (camera.children[1]) return;
     $('js--door').remove();
     let doorCamera = document.createElement('a-obj-model');
     doorCamera.setAttribute('id', 'js--door');
@@ -48,6 +50,7 @@ placeDoor = () =>{
 };
 
 pickSmallWall = () =>{
+    if (camera.children[1]) return;
     $('js--smollWall').remove();
     let smoolWallCamera = document.createElement('a-obj-model');
     smoolWallCamera.setAttribute('id', 'js--smollWall');
@@ -76,6 +79,7 @@ placeShortWall = () =>{
 };
 
 pickSmollSmollWall = () =>{
+    if (camera.children[1]) return;
     $('js--smollSmollWall').remove();
     let smoolWallCamera = document.createElement('a-obj-model');
     smoolWallCamera.setAttribute('id', 'js--smollSmollWall');
@@ -104,6 +108,7 @@ placeSmollSmollWall = () =>{
 };
 
 pickSmollSmollWall2 = () =>{
+    if (camera.children[1]) return;
     $('js--smollSmollWall2').remove();
     let smoolWallCamera = document.createElement('a-obj-model');
     smoolWallCamera.setAttribute('id', 'js--smollSmollWall2');
@@ -132,6 +137,7 @@ placeSmollSmollWall2 = () =>{
 };
 
 pickBigWall = () =>{
+    if (camera.children[1]) return;
     $('js--bigWall').remove();
     let smoolWallCamera = document.createElement('a-obj-model');
     smoolWallCamera.setAttribute('id', 'js--bigWall');
@@ -160,6 +166,7 @@ placeBigWall = () =>{
 };
 
 pickRoof = () =>{
+    if (camera.children[1]) return;
     $('js--roof').remove();
     let smoolWallCamera = document.createElement('a-obj-model');
     smoolWallCamera.setAttribute('id', 'js--roof');
