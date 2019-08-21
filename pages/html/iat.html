@@ -39,10 +39,27 @@
         <!--        Dak-->
         <a-asset-item id="rietDak-obj" src="../../3dModels/rietDak.obj"></a-asset-item>
         <a-asset-item id="rietDak-mtl" src="../../3dModels/rietDak.mtl"></a-asset-item>
-<!--        extra mtl files for colloring-->
+        <!--        extra mtl files for colloring-->
+<!--        deur-->
         <a-asset-item id="deurYellow-mtl" src="../../3dModels/extraMtlColorFiles/deurYellow.mtl"></a-asset-item>
         <a-asset-item id="deurBlue-mtl" src="../../3dModels/extraMtlColorFiles/deurBlue.mtl"></a-asset-item>
         <a-asset-item id="deurRed-mtl" src="../../3dModels/extraMtlColorFiles/deurRed.mtl"></a-asset-item>
+<!--        zijmuren-->
+        <a-asset-item id="muurZijkantenYellow-mtl" src="../../3dModels/extraMtlColorFiles/muurZijkantenYellow.mtl"></a-asset-item>
+        <a-asset-item id="muurZijkantenBlue-mtl" src="../../3dModels/extraMtlColorFiles/muurZijkantenBlue.mtl"></a-asset-item>
+        <a-asset-item id="muurZijkantenRed-mtl" src="../../3dModels/extraMtlColorFiles/muurZijkantenRed.mtl"></a-asset-item>
+<!--        korte muur naast deur-->
+        <a-asset-item id="muurZonderDeurYellow-mtl" src="../../3dModels/extraMtlColorFiles/muurZonderDeurYellow.mtl"></a-asset-item>
+        <a-asset-item id="muurZonderDeurBlue-mtl" src="../../3dModels/extraMtlColorFiles/muurZonderDeurBlue.mtl"></a-asset-item>
+        <a-asset-item id="muurZonderDeurRed-mtl" src="../../3dModels/extraMtlColorFiles/muurZonderDeurRed.mtl"></a-asset-item>
+<!--        dak-->
+        <a-asset-item id="rietDakRed-mtl" src="../../3dModels/extraMtlColorFiles/rietDakRed.mtl"></a-asset-item>
+        <a-asset-item id="rietDakBlue-mtl" src="../../3dModels/extraMtlColorFiles/rietDakBlue.mtl"></a-asset-item>
+        <a-asset-item id="rietDakYellow-mtl" src="../../3dModels/extraMtlColorFiles/rietDakYellow.mtl"></a-asset-item>
+<!--        lange muur-->
+        <a-asset-item id="muurYellow-mtl" src="../../3dModels/extraMtlColorFiles/muurYellow.mtl"></a-asset-item>
+        <a-asset-item id="muurBlue-mtl" src="../../3dModels/extraMtlColorFiles/muurBlue.mtl"></a-asset-item>
+        <a-asset-item id="muurRed-mtl" src="../../3dModels/extraMtlColorFiles/muurRed.mtl"></a-asset-item>
     </a-assets>
 
     <!--    scale nodig voor size omdat het custom ombjects zijn dus can jniet met heigt en widht werken-->
@@ -52,6 +69,12 @@
     <a-obj-model id="js--smollSmollWall" position="11.35 0 6.27" rotation="0" scale="1 1 1"  src="#korteMuur1-obj" mtl="#korteMuur1-mtl" onclick="colorSmollSmollWall()"></a-obj-model>
     <a-obj-model id="js--smollSmollWall2" position="-1.5 0 6.3" rotation="0" scale="1 1 1" src="#korteMuur2-obj" mtl="#korteMuur2-mtl" onclick="colorSmollSmollWall2()"></a-obj-model>
     <a-obj-model id="js--roof" position="5 1.3 6" rotation="0" scale="0.8 1.5 1.2" src="#rietDak-obj" mtl="#rietDak-mtl" onclick="colorRoof()"></a-obj-model>
+
+    <!--    paints and paint remover-->
+    <a-sphere id="sphere-red" position = "16 0.5 12" radius="0.5" color="red" onclick="selectRed()"> </a-sphere>
+    <a-sphere id="sphere-blue" position = "19 0.5 12" radius="0.5" color="blue" onclick="selectBlue()"> </a-sphere>
+    <a-sphere id="sphere-yellow" position = "17 0.5 12" radius="0.5" color="yellow" onclick="selectYellow()"> </a-sphere>
+    <a-sphere id="sphere-textureNotFound" src="../../images/textureNotFound.jpg" position = "18 0.5 12" radius="0.5" onclick="selectDefault()"> </a-sphere>
 
     <!--    Camera movement to other corners-->
     <!--    SouthEast-->
