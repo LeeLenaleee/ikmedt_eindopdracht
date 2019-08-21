@@ -42,12 +42,29 @@
     </a-assets>
 
 <!--    scale nodig voor size omdat het custom ombjects zijn dus can jniet met heigt en widht werken-->
-    <a-obj-model id="js--bigWall" position="15 0.5 22" rotation="0 270" scale="0.3 0.3 0.3" src="#muur-obj" mtl="#muur-mtl" onclick="pickBigWall()"></a-obj-model>
-    <a-obj-model id="js--smollWall" position="19 0.5 15" rotation="0 0 0" scale="0.3 0.3 0.3" src="#muurZonderDeur-obj" mtl="#muurZonderDeur-mtl" onclick="pickSmallWall()"></a-obj-model>
-    <a-obj-model id="js--door" position="16 0.5 19" rotation="0 270" scale="0.3 0.3 0.3" src="#deur-obj" mtl="#deur-mtl" onclick="pickDoor()"></a-obj-model>
-    <a-obj-model id="js--smollSmollWall" position="17.3 0.5 17.3" rotation="0 120" scale="0.3 0.3 0.3"  src="#korteMuur1-obj" mtl="#korteMuur1-mtl" onclick="pickSmollSmollWall()"></a-obj-model>
-    <a-obj-model id="js--smollSmollWall2" position="13.5 0.5 19" rotation="0 45" scale="0.3 0.3 0.3" src="#korteMuur2-obj" mtl="#korteMuur2-mtl" onclick="pickSmollSmollWall2()"></a-obj-model>
-    <a-obj-model id="js--roof" position="18 0.5 10" rotation="45 -50" scale="0.3 0.3 0.3" src="#rietDak-obj" mtl="#rietDak-mtl" onclick="pickRoof()"></a-obj-model>
+    <a-obj-model id="js--bigWall" position="15 0.5 22" rotation="0 270" scale="0.3 0.3 0.3" src="#muur-obj" mtl="#muur-mtl" onclick="pickBigWall()">
+        <a-text value="muur achterkant huis" position="0 4 -4" color="black" scale="4 4 4" rotation=" 0 -90 0"></a-text>
+    </a-obj-model>
+
+    <a-obj-model id="js--smollWall" position="19 0.5 15" rotation="0 0 0" scale="0.3 0.3 0.3" src="#muurZonderDeur-obj" mtl="#muurZonderDeur-mtl" onclick="pickSmallWall()">
+        <a-text value="Kleine muur naast deur" position="0 4 -4" color="black" scale="4 4 4" rotation=" 0 -90 0"></a-text>
+    </a-obj-model>
+
+    <a-obj-model id="js--door" position="16 0.5 19" rotation="0 270" scale="0.3 0.3 0.3" src="#deur-obj" mtl="#deur-mtl" onclick="pickDoor()">
+        <a-text value="Deur" position="0 4 -1" color="black" scale="4 4 4" rotation=" 0 -90 0"></a-text>
+    </a-obj-model>
+
+    <a-obj-model id="js--smollSmollWall" position="17.3 0.5 17.3" rotation="0 120" scale="0.3 0.3 0.3"  src="#korteMuur1-obj" mtl="#korteMuur1-mtl" onclick="pickSmollSmollWall()">
+        <a-text value="Zijmuur 1" position="0 4 2" color="black" scale="4 4 4" rotation=" 0 90 0"></a-text>
+    </a-obj-model>
+
+    <a-obj-model id="js--smollSmollWall2" position="13.5 0.5 19" rotation="0 45" scale="0.3 0.3 0.3" src="#korteMuur2-obj" mtl="#korteMuur2-mtl" onclick="pickSmollSmollWall2()">
+        <a-text value="Zijmuur 2" position="0 4 2" color="black" scale="4 4 4" rotation=" 0 90 0"></a-text>
+    </a-obj-model>
+
+    <a-obj-model id="js--roof" position="18 0.5 10" rotation="45 -50" scale="0.3 0.3 0.3" src="#rietDak-obj" mtl="#rietDak-mtl" onclick="pickRoof()">
+        <a-text value="Dak" position="0 2 -4" color="black" scale="6 6 6" rotation="-45 0"></a-text>
+    </a-obj-model>
 
 <!--    Camera movement to other corners-->
 <!--    SouthEast-->
