@@ -2,6 +2,8 @@
 eindopdracht voor keuzevak IKMEDT
 Voorlichting in VR voor specialisaties
 
+in het geval dat de site in het portfolio niet meer online staat, kan het eindproduct ook via deze link benaderd worden: https://leelenaleee.github.io/ikmedt_eindopdracht/index.html
+
 ## License
 License MIT License
 
